@@ -1,12 +1,27 @@
 /* Small, idempotent enhancements. The original application bundle stays intact. */
 (() => {
   const questions = [
-    ['O que é um Company OS personalizado?', 'É um sistema operacional para a empresa que conecta processos internos, aplicações, integrações e agentes de inteligência artificial. A Axial desenha esse sistema a partir da rotina e das prioridades de cada operação, com supervisão humana e governança.'],
-    ['Como começa um projeto com a Axial Corp?', 'O primeiro passo é conversar sobre a operação. Depois, a imersão mapeia rotinas, decisões, dados, ferramentas e gargalos. O trabalho segue com o blueprint do sistema, construção e piloto, e operação contínua.'],
-    ['Quais serviços fazem parte da Axial Corp?', 'A Axial reúne consultoria em IA (Axial Intelligence), marketing (LUMIAI), motion e vídeo com IA (Axial Motion), audiovisual (STUDIOLUMI), educação e comunidade (Axial Connect), e agentes e automações (Axial Agents).'],
-    ['Os agentes funcionam com supervisão humana?', 'Sim. A proposta do Company OS inclui supervisão humana, regras, auditoria e evolução contínua. Os agentes compartilham contexto e ferramentas dentro da arquitetura definida para a empresa.'],
-    ['Como solicitar um diagnóstico da operação?', 'Use o formulário de contato, escolha a ramificação e descreva sua operação. Ao continuar, o site abre o WhatsApp com a mensagem preenchida. A conversa é o ponto de partida para a proposta de imersão.']
-  ];
+  [
+    "O que é a Axial Corp?",
+    "A Axial Corp é uma holding de inteligência artificial que estuda processos internos e constrói sistemas personalizados para empresas. Sua proposta conecta aplicações, integrações e agentes de IA em um Company OS, com supervisão humana e governança."
+  ],
+  [
+    "Quais são as ramificações da Axial Corp?",
+    "A Axial Corp reúne seis ramificações: Axial Intelligence, de consultoria em IA; LUMIAI, de marketing; Axial Motion, de motion, vídeo com IA e experiências digitais; STUDIOLUMI, de audiovisual e posicionamento; Axial Connect, de educação, comunidade e eventos; e Axial Agents, de agentes e automações."
+  ],
+  [
+    "Como a Axial Corp trabalha com as empresas?",
+    "A Axial Corp começa pela imersão operacional para entender rotinas, decisões, dados, ferramentas e gargalos. Em seguida, desenha o blueprint do Company OS, desenvolve a solução e valida um piloto. O processo continua com acompanhamento e evolução da operação."
+  ],
+  [
+    "O que é o Company OS desenvolvido pela Axial Corp?",
+    "O Company OS da Axial Corp é um sistema operacional sob medida para a empresa. Ele conecta processos, aplicações, integrações e agentes de inteligência artificial em uma arquitetura definida para a operação, com memória, regras, auditoria e supervisão humana."
+  ],
+  [
+    "Como entrar em contato com a Axial Corp?",
+    "Você pode falar com a Axial Corp pelo WhatsApp +55 (11) 94177-7769 ou pelo Instagram @axial.corp. Também pode preencher o formulário deste site, escolher a ramificação e descrever sua operação para continuar a conversa no WhatsApp."
+  ]
+];
   function enhance() {
     const header = document.querySelector('.site-header');
     const main = document.querySelector('#root main');
@@ -60,7 +75,7 @@
       const section = document.createElement('section'); section.className = 'answers'; section.id = 'perguntas-frequentes';
       section.setAttribute('aria-labelledby', 'perguntas-title');
       const inner = document.createElement('div'); inner.className = 'answers-inner';
-      const heading = document.createElement('h2'); heading.id = 'perguntas-title'; heading.textContent = 'Perguntas sobre IA e Company OS'; inner.append(heading);
+      const heading = document.createElement('h2'); heading.id = 'perguntas-title'; heading.textContent = 'Perguntas sobre a Axial Corp'; inner.append(heading);
       questions.forEach(([question, answer]) => {
         const details = document.createElement('details');
         const summary = document.createElement('summary'); summary.textContent = question;
